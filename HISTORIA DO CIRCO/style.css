@@ -1,0 +1,22 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const botoes = document.querySelectorAll('.btn-proximo');
+    
+    botoes.forEach(button => {
+        button.addEventListener('click', function() {
+            const proximoPasso = this.getAttribute('data-proximo');
+            mostrarPasso(proximoPasso);
+        });
+    });
+
+    function mostrarPasso(passoId) {
+        // Esconde todos os passos
+        const passos = document.querySelectorAll('.passo');
+        passos.forEach(passo => {
+            passo.classList.remove('ativo');
+        });
+
+        // Exibe o passo escolhido
+        const passoAtivo = document.getElementById(passo-${passoId});
+        passoAtivo.classList.add('ativo');
+    }
+});
